@@ -31,6 +31,11 @@ namespace TelerikMvcTest.Areas.HelpPage
             _documentNavigator = xpath.CreateNavigator();
         }
 
+        /// <summary>
+        /// GetDocumentation
+        /// </summary>
+        /// <param name="actionDescriptor"></param>
+        /// <returns></returns>
         public virtual string GetDocumentation(HttpActionDescriptor actionDescriptor)
         {
             XPathNavigator methodNode = GetMethodNode(actionDescriptor);
@@ -46,6 +51,11 @@ namespace TelerikMvcTest.Areas.HelpPage
             return null;
         }
 
+        /// <summary>
+        /// GetDocumentation
+        /// </summary>
+        /// <param name="parameterDescriptor"></param>
+        /// <returns></returns>
         public virtual string GetDocumentation(HttpParameterDescriptor parameterDescriptor)
         {
             ReflectedHttpParameterDescriptor reflectedParameterDescriptor = parameterDescriptor as ReflectedHttpParameterDescriptor;

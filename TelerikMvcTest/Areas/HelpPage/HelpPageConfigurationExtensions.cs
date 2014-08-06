@@ -11,6 +11,9 @@ using TelerikMvcTest.Areas.HelpPage.Models;
 
 namespace TelerikMvcTest.Areas.HelpPage
 {
+    /// <summary>
+    /// HelpPageConfigurationExtensions
+    /// </summary>
     public static class HelpPageConfigurationExtensions
     {
         private const string ApiModelPrefix = "MS_HelpPageApiModel_";

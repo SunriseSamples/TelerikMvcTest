@@ -5,6 +5,9 @@ using System.Web.Http.Description;
 
 namespace TelerikMvcTest.Areas.HelpPage
 {
+    /// <summary>
+    /// ApiDescriptionExtensions
+    /// </summary>
     public static class ApiDescriptionExtensions
     {
         /// <summary>
