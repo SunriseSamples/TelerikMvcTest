@@ -8,6 +8,10 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @*
+    参考：http://blogs.telerik.com/blogs/posts/12-03-08/using-the-telerik-extensions-in-asp-net-mvc4-today---a-first-look.aspx
+    官网 Blog：http://blogs.telerik.com/aspnetmvcteam/posts.aspx
+    *@
     @(Html.Telerik().StyleSheetRegistrar().DefaultGroup(group => group.Add("telerik.common.css").Add("telerik.windows7.css").Combined(true).Compress(true)))
 </head>
 <body>
