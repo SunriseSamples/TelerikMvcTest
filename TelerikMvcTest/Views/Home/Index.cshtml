@@ -19,6 +19,17 @@
         </div>
     </section>
     <section class="content-wrapper main-content clear-fix">
+        @(Html.Telerik().Menu()
+        .Name("TelerikMenu")
+        .Items(items =>
+        {
+            items.Add().Text("Awesome")
+            .Items(subItems =>
+            {
+                subItems.Add().Text("Awesome Sauce");
+            });
+        })
+        )
         <h3>We suggest the following steps:</h3>
         <ol class="round">
             <li class="one">
