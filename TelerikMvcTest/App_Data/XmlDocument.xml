@@ -1089,6 +1089,49 @@
             <param name="parameterDescriptor"></param>
             <returns></returns>
         </member>
+        <member name="T:TelerikMvcTest.Controllers.ControlsController">
+            <summary>
+            ControlsController
+            </summary>
+        </member>
+        <member name="M:TelerikMvcTest.Controllers.ControlsController.Index">
+            <summary>
+            GET: /Controls/
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TelerikMvcTest.Controllers.ControlsController.Grid">
+            <summary>
+            GET: /Controls/Grid/
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TelerikMvcTest.Controllers.ControlsController.SelectProduct">
+            <summary>
+            SelectProduct
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TelerikMvcTest.Controllers.ControlsController.InsertProduct">
+            <summary>
+            InsertProduct
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TelerikMvcTest.Controllers.ControlsController.UpdateProduct(System.Int32)">
+            <summary>
+            UpdateProduct
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TelerikMvcTest.Controllers.ControlsController.DeleteProduct(System.Int32)">
+            <summary>
+            DeleteProduct
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:TelerikMvcTest.Controllers.HomeController">
             <summary>
             HomeController
@@ -1145,6 +1188,31 @@
         <member name="M:TelerikMvcTest.WebApiApplication.Application_Start">
             <summary>
             Application_Start
+            </summary>
+        </member>
+        <member name="T:TelerikMvcTest.Models.Product">
+            <summary>
+            Product
+            </summary>
+        </member>
+        <member name="P:TelerikMvcTest.Models.Product.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:TelerikMvcTest.Models.Product.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TelerikMvcTest.Models.Product.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="P:TelerikMvcTest.Models.Product.Category">
+            <summary>
+            Category
             </summary>
         </member>
     </members>
