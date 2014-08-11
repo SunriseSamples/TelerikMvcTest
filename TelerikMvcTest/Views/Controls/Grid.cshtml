@@ -5,37 +5,35 @@
 
 <h2>Grid</h2>
 @Html.ActionLink("返回", "Index", "Controls", new { area = "" }, null)
-<div id="clientsDb">
-    @(Html.Telerik().Grid<Product>()
-        .Name("Grid")
-        .ToolBar(tools => tools.Insert().ButtonType(GridButtonType.ImageAndText).ImageHtmlAttributes(new { style = "margin-left:0" }))
-        .DataBinding(dataBinding =>
+@(Html.Telerik().Grid<Product>()
+    .Name("Grid")
+    .ToolBar(tools => tools.Insert().ButtonType(GridButtonType.ImageAndText).ImageHtmlAttributes(new { style = "margin-left:0" }))
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax()
+            .OperationMode(GridOperationMode.Client)
+            .Select("SelectProduct", "Controls")
+            .Insert("InsertProduct", "Controls")
+            .Update("UpdateProduct", "Controls")
+            .Delete("DeleteProduct", "Controls");
+    })
+    .DataKeys(keys => { keys.Add(p => p.ID); })
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.ID).Title("编号");
+        columns.Bound(p => p.Name).Title("名称");
+        columns.Bound(p => p.Price).Title("单价");
+        columns.Bound(p => p.Category).Title("类型");
+        columns.Command(commands =>
         {
-            dataBinding.Ajax()
-                .OperationMode(GridOperationMode.Client)
-                .Select("SelectProduct", "Controls")
-                .Insert("InsertProduct", "Controls")
-                .Update("UpdateProduct", "Controls")
-                .Delete("DeleteProduct", "Controls");
-        })
-        .DataKeys(keys => { keys.Add(p => p.ID); })
-        .Columns(columns =>
-        {
-            columns.Bound(p => p.ID).Title("编号");
-            columns.Bound(p => p.Name).Title("名称");
-            columns.Bound(p => p.Price).Title("单价");
-            columns.Bound(p => p.Category).Title("类型");
-            columns.Command(commands =>
-            {
-                commands.Edit().ButtonType(GridButtonType.ImageAndText);
-                commands.Delete().ButtonType(GridButtonType.ImageAndText);
-            }).Title("操作");
-        })
-        .Editable(edit => edit.Mode(GridEditMode.InLine))
-        .Pageable()
-        .Sortable()
-        .Filterable()
-        .Groupable()
-        )
+            commands.Edit().ButtonType(GridButtonType.ImageAndText);
+            commands.Delete().ButtonType(GridButtonType.ImageAndText);
+        }).Title("操作");
+    })
+    .Editable(edit => edit.Mode(GridEditMode.InLine))
+    .Pageable()
+    .Sortable()
+    .Filterable()
+    .Groupable()
     )
-</div>
+)
