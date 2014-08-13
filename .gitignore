@@ -154,4 +154,4 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-/TelerikMvcTest/App_Data/XmlDocument.xml
+TelerikMvcTest/App_Data/XmlDocument.xml
